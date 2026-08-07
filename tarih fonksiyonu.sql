@@ -1,0 +1,32 @@
+------TARÝH FONKAÝYONLARI ------
+--USE KÝTAP
+--SELECT * FROM KÝTAP
+
+/*
+SELECT GETDATE() --ANLIK SAAT/ZAMAN
+SELECT DATEPART( YEAR,GETDATE()) -- BELÝRTÝLEN YILIN ÞUANA KADARKÝ MESAFESÝ
+SELECT DATEPART( MONTH,GETDATE()) -- BELÝRTÝLEN AYIN ÞUANA KADARKÝ MESAFESÝ
+SELECT DATEPART( DAY,GETDATE()) -- BELÝRTÝLEN GÜNÜN ÞUANA KADARKÝ MESAFESÝ
+SELECT DATEPART( QUARTER,GETDATE()) -- BELÝRTÝLEN ÇEYREÐÝN ÞUANA KADARKÝ MESAFESÝ
+
+--ÇEYREK=QUARTER: O-Þ-M  / N-M-H /  T-A-E  / E-K-A
+--               1.ÇEYREK/2.ÇEYREK/3.ÇEYREK/4.ÇEYREK
+
+*/
+
+SELECT GETDATE() AS 'ÞU AN'
+SELECT DATEPART(MONTH,GETDATE())
+SELECT DATEPART(DAY,'2016-01-23')
+
+SELECT * FROM KÝTAP
+
+-- SELECT DATEDýFF(KISTAS,KÜÇÜK,BÜYÜK)-- iki kýstas arasýndaki FARK
+SELECT DATEDIFF(YEAR, '2015-01-01', '2016-12-12')
+-- belirtilen iki tarih arasýnda kaç (kýstas) yýl olduðunu gösteriyor.
+SELECT DATEDIFF(MONTH, '2015-01-01', '2016-12-12'),
+-- belirtilen iki tarih arasýnda kaç (kýstas) ay olduðunu gösteriyor.
+
+
+--SELECT DATEADD(KISTAS,ADET,HANGÝZAMAN'A)--- kýstas'a zaman EKLEME
+select dateadd(day,10,GETDATE())
+--var olan zamana 10 gün eklendi
